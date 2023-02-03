@@ -5,14 +5,14 @@ import { Blog } from './blog.model';
 
 @Injectable()
 export class BlogsServices {
-  private blogs: Blog[] = [];
+  // private blogs: Blog[] = [];
 
   //Inject model step 2
   constructor(@InjectModel('Blog') private readonly blogModel: Model<Blog>) {}
 
   //增加blog
   async insertBlog(title: string, body: string, author: string) {
-    const blogId = Math.random().toString();
+    // const blogId = Math.random().toString();
     const time = new Date().toString();
     const newBlog = new this.blogModel({ title, body, author, time });
 
